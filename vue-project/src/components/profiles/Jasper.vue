@@ -1,7 +1,7 @@
 <template>
   <section id="jasper" class="min-h-screen flex items-center justify-center bg-red-50 p-8">
     <div class="max-w-3xl text-center">
-      <h2 class="text-3xl font-bold text-black mb-4">Jasper</h2>
+      <h2 class="text-3xl font-bold text-black mb-4">{{ displayedText }}<span v-if="isTyping" class="cursor">|</span></h2>
       <p class="text-lg text-gray-800 mb-6">
         Hi, I'm Jasper! I just finished my second year of computer engineering at the University of Waterloo. 
         In my spare time, I enjoy learning new technology, playing basketball, and video games.
@@ -76,3 +76,50 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const text = "Jasper";
+const displayedText = ref("");
+const index = ref(0);
+const isTyping = ref(true);
+
+function typeText() {
+  if (index.value < text.length) {
+    displayedText.value += text.charAt(index.value);
+    index.value++;
+    setTimeout(typeText, 150); // Adjust typing speed here (in milliseconds)
+  } else {
+    isTyping.value = false; // Stop showing the cursor after typing is done
+    setTimeout(startUntyping, 3000);
+  }
+}
+
+function startUntyping() {
+  if (displayedText.value.length > 0) {
+    displayedText.value = displayedText.value.slice(0, -1); // Remove the last character
+    setTimeout(startUntyping, 100); // Adjust untyping speed here (in milliseconds)
+  } else {
+    isTyping.value = true; // Start typing again
+    index.value = 0; // Reset the index
+    typeText(); // Restart the typing effect
+  }
+}
+
+onMounted(() => {
+  typeText(); // Start the typing effect when the component is mounted
+});
+</script>
+
+<style>
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
