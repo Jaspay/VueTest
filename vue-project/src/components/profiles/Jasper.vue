@@ -11,7 +11,7 @@
           href="https://linkedin.com/in/j4fei" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-700 hover:text-blue-600 transition-colors"
+          class="text-gray-700 hover:text-blue-600 transition-colors hover:scale-110"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -33,7 +33,7 @@
           href="https://instagram.com/jaspay" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-700 hover:text-pink-600 transition-colors"
+          class="text-gray-700 hover:text-pink-600 transition-colors hover:scale-110"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -55,7 +55,7 @@
           href="mailto:j4fei@uwaterloo.ca" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-gray-700 hover:text-red-600 transition-colors"
+          class="text-gray-700 hover:text-black-600 transition-colors hover:scale-110"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
