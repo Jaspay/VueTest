@@ -1,5 +1,14 @@
 <template>
   <section id="wilson" class="min-h-screen flex items-center justify-center p-12 bg-wilson-gradient">
+    <!-- Wrapper div for blurs -->
+    <div class="absolute w-full h-full top-100 left-0 overflow-hidden">
+      <!-- Top Blur -->
+      <div class="absolute w-[50vw] h-[30vw] min-w-[350px] min-h-[350px] -top-[-50px] left-[-20vw] rounded-[764px] bg-[rgba(65,20,200,0.7)] blur-[100px] z-0"></div>
+
+      <!-- Bottom Blur -->
+      <div class="absolute w-[70vw] h-[50vw] min-w-[350px] min-h-[250px] top-[350px] -right-[25vw] rounded-[764px] bg-[rgba(65,20,200,0.7)] blur-[100px] z-0"></div>
+    </div>
+    
     <div class="space-y-10 text-center">
       <!-- Main Introduction -->
       <div ref="mainIntroRef" class="section">
