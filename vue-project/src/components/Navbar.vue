@@ -21,24 +21,18 @@
   </nav>
 </template>
 
-<script>
-export default {
-  name: 'Navbar',
-  data() {
-    return {
-      navItems: [
-        { id: 'home', name: 'Home' },
-        { id: 'jasper', name: 'Jasper' },
-        { id: 'thiveyan', name: 'Thiveyan' },
-        { id: 'wilson', name: 'Wilson' },
-      ]
-    }
-  },
-  methods: {
-    scrollToSection(id) {
-      const element = document.getElementById(id);
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+<script setup>
+import { ref } from 'vue';
+
+const navItems = ref([
+  { id: 'home', name: 'Home' },
+  { id: 'jasper', name: 'Jasper' },
+  { id: 'thiveyan', name: 'Thiveyan' },
+  { id: 'wilson', name: 'Wilson' },
+]);
+
+const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
