@@ -6,6 +6,10 @@
         Hi, I'm Jasper! I just finished my second year of computer engineering at the University of Waterloo. 
         In my spare time, I enjoy learning new technology, playing basketball, and video games.
       </p>
+      <h3 class="text-2xl text-black mb-2">LinkedIn:</h3>
+      <a href="https://www.linkedin.com/in/j4fei" class="text-blue-600 hover:text-blue-800 underline">
+        View my LinkedIn profile
+      </a>
     </div>
   </section>
 </template>
