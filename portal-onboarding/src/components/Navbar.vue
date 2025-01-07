@@ -1,24 +1,28 @@
 <template>
-  <nav class="fixed w-full bg-black text-white shadow-lg z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex-shrink-0">
-          <span class="text-yellow-400 text-xl font-semibold">Portal Onboarding Project</span>
-        </div>
-        
-        <div class="flex space-x-4">
-          <button
-            v-for="item in navItems"
-            :key="item.id"
-            @click="scrollToSection(item.id)"
-            class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-yellow-100 hover:text-yellow-400"
-          >
-            {{ item.name }}
-          </button>
-        </div>
+  <v-app-bar 
+    color="black" 
+    elevation="4"
+    height="80"
+    app
+  >
+    <v-container class="d-flex align-center justify-space-between">
+      <v-app-bar-title class="text-amber-darken-2 text-h5 font-weight-medium">
+        Portal Onboarding Project
+      </v-app-bar-title>
+      
+      <div>
+        <v-btn
+          v-for="item in navItems"
+          :key="item.id"
+          @click="scrollToSection(item.id)"
+          variant="text"
+          class="text-amber-lighten-4 mx-1"
+        >
+          {{ item.name }}
+        </v-btn>
       </div>
-    </div>
-  </nav>
+    </v-container>
+  </v-app-bar>
 </template>
 
 <script lang="ts" setup>
