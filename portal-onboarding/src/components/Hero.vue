@@ -16,8 +16,10 @@
   </section>
 </template>
 
-<script>
-export default {
+<script lang="ts" setup>
+
+defineOptions({
   name: 'Hero'
-}
+})
+
 </script>

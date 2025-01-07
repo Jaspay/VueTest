@@ -21,7 +21,7 @@
   </nav>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue';
 
 const navItems = ref([
@@ -31,8 +31,8 @@ const navItems = ref([
   { id: 'wilson', name: 'Wilson' },
 ]);
 
-const scrollToSection = (id) => {
+const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
-  element.scrollIntoView({ behavior: 'smooth' });
+  element?.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
