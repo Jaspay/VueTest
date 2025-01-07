@@ -77,7 +77,7 @@
   </section>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 
 const text = "Jasper";
