@@ -1,14 +1,16 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
+  <v-app>
     <Navbar />
-    <Hero />
-    <Jasper />
-    <Thiveyan />
-    <Wilson />
-  </div>
+    <v-main>
+        <Hero />
+        <Jasper />
+        <Thiveyan />
+        <Wilson />
+    </v-main>
+  </v-app>
 </template>
 
-<script lang = "ts" setup>
+<script lang="ts" setup>
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import Jasper from './components/profiles/Jasper.vue'

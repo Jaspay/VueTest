@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center bg-yellow-50 p-8 relative overflow-hidden">
+  <v-container id="home" class="min-h-screen d-flex align-center justify-center relative overflow-hidden pa-8" fluid>
     <!-- Decorative Blurs -->
     <div class="absolute w-[85vw] h-[40vw] min-w-[300px] min-h-[300px] -top-[10vh] -left-[15vw] rounded-full bg-[rgba(255,200,0,0.15)] blur-[120px] z-0"></div>
     
@@ -13,13 +13,11 @@
         We're excited to introduce ourselves to the team.
       </p>
     </div>
-  </section>
+  </v-container>
 </template>
 
 <script lang="ts" setup>
-
 defineOptions({
   name: 'Hero'
 })
-
 </script>
