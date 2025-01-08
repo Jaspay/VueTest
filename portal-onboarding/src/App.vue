@@ -1,11 +1,14 @@
 <template>
   <v-app>
-    <Navbar />
     <v-main>
+      <router-view v-if="$route.path === '/pinia'" />
+      <template v-else>
+        <Navbar />
         <Hero />
         <Jasper />
         <Thiveyan />
         <Wilson />
+      </template>
     </v-main>
   </v-app>
 </template>

@@ -43,16 +43,25 @@
                 ></v-btn>
               </div>
               
-              <!-- Skills button on the right -->
-              <v-btn
-                color="primary"
-                @click="dialog = true"
-                variant="outlined"
-                size="small"
-                class="ml-auto"
-              >
-                Skills
-              </v-btn>
+              <div>
+                <v-btn
+                  color="primary"
+                  @click="dialog = true"
+                  variant="outlined"
+                  size="small"
+                  class="mx-2"
+                >
+                  Skills
+                </v-btn>
+                <v-btn
+                  color="secondary"
+                  variant="outlined"
+                  size="small"
+                  class="mx-2"
+                >
+                  <RouterLink to ="/pinia">Pinia Test</RouterLink>
+                </v-btn>
+              </div>
             </div>
           </v-card-actions>
         </v-card>
@@ -94,13 +103,27 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
+import {computed} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
 
 const text = "Jasper";
 const displayedText = ref("");
 const index = ref(0);
 const isTyping = ref(true);
 const isHovered = ref(false);
-const dialog = ref(false); // For controlling the dialog
+const dialog = ref(false);
+
+const router = useRouter()
+const route = useRoute()
+
+const search = computed({
+  get() {
+    return route.query.search ?? ''
+  },
+  set(search) {
+    router.replace({query: {search}})
+  }
+})
 
 function typeText() {
   if (index.value < text.length) {
@@ -146,9 +169,7 @@ onMounted(() => {
   transition: all 0.3s ease;
 }
 
-
 .custom-hover-card:hover {
   transform: translateY(120px) scale(1.02);
 }
-
 </style>
