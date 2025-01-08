@@ -103,6 +103,62 @@
         </div>
       </div>
 
+      <div ref="sorterRef" class="flex flex-col gap-2 max-w-2xl mt-8 items-center">
+        <h2 class="text-white text-xl mb-2">Array Sorter Demo Using Pinia</h2>
+  
+        <!-- Input Section -->
+        <div class="flex justify-center gap-4 mb-4">
+          <v-text-field
+            v-model="sorterStore.inputNumber"
+            type="number"
+            variant="outlined"
+            density="compact"
+            bg-color="white/10"
+            class="w-32"
+            style="color: white;"
+          ></v-text-field>
+          
+          <v-btn
+            color="primary"
+            @click="sorterStore.addNumber"
+          >
+            Add Number
+          </v-btn>
+        </div>
+
+        <!-- Array Display -->
+        <v-card class="bg-white/10 px-6 py-4 mb-4 w-full">
+          <div class="space-y-2">
+            <p class="text-white text-xl">
+              Current Array: 
+              <span v-if="!sorterStore.isEmpty" class="font-mono">
+                [{{ sorterStore.numbers.join(', ') }}]
+              </span>
+              <span v-else class="text-white/50">
+                (empty)
+              </span>
+            </p>
+            
+            <!-- Stats Section -->
+            <div v-if="!sorterStore.isEmpty" class="text-white/80 space-y-1">
+              <p>Length: {{ sorterStore.arrayLength }}</p>
+              <p>Sum: {{ sorterStore.arraySum }}</p>
+              <p>Average: {{ sorterStore.arrayAverage.toFixed(2) }}</p>
+              <p class="font-mono">
+                Sorted: [{{ sorterStore.sortedArray.join(', ') }}]
+              </p>
+            </div>
+          </div>
+        </v-card>
+
+        <v-btn
+          color="error"
+          @click="sorterStore.clearArray"
+          :disabled="sorterStore.isEmpty"
+        >
+          Clear Array
+        </v-btn>
+      </div>
     </div>
   </section>
 </template>
@@ -114,6 +170,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import { ref, onMounted } from 'vue';
 import { useCounterStore } from '@/stores/counter'
+import { useSorterStore } from '@/stores/sorter'
 
 const languages = [
   'Python', 
@@ -150,6 +207,7 @@ const technologiesRef = ref(null);
 const counterRef = ref(null);
 
 const counterStore = useCounterStore()
+const sorterStore = useSorterStore()
 
 // Function to handle intersection
 const handleIntersection = (entries: IntersectionObserverEntry[]) => {
