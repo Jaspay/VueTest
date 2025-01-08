@@ -1,48 +1,36 @@
 <template>
-  <section id="thiveyan" class="min-h-screen flex items-center justify-center bg-orange-50 p-8">
-    <div class="max-w-3xl text-left flex items-center space-x-8">
-      <img src="@/assets/Thiveyan.jpeg" alt="Profile Picture" class="profile-picture">
-      <div>
-        <h2 class="text-3xl font-bold text-black mb-4">Thiveyan</h2>
-        <p class="text-lg text-gray-800 mb-6">
-        Hi, This is Thiveyan. I am a third-year student at the University of Waterloo, majoring in Stats with a CS minor. I am passionate about exploring new technologies and enjoy spending my free time playing chess and badminton.
-      </p>
-      <div class="flex space-x-4">
-        <a href="https://github.com/Thiveyan" target="_blank" class="text-gray-800 hover:text-black">
-          <i class="fab fa-github text-2xl"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/Thiveyan" target="_blank" class="text-gray-800 hover:text-black">
-          <i class="fab fa-linkedin text-2xl"></i>
-        </a>
-        <a href="mailto:tjegasot@uwaterloo.ca" class="text-gray-800 hover:text-black">
-          <i class="fas fa-envelope text-2xl"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+  <section id="thiveyan" class="min-h-screen flex items-center justify-center p-12 bg-orange-50">
+    <v-card class="mx-auto" height="300" width="900" hover>
+      <v-row align="center" justify="center">
+        <v-col cols="3" class="d-flex align-center justify-center">
+          <v-avatar size="180">
+            <img src="@/assets/Thiveyan.jpeg" alt="Thiveyan">
+          </v-avatar>
+        </v-col>
+        <v-col cols="9" class="pl-5">
+          <v-card-title>
+            <span class="text-3xl font-bold text-black mb-4">Thiveyan</span>
+          </v-card-title>
+          <v-card-text class="text-lg text-gray-800 mb-4">
+            Hi, This is Thiveyan. I am a third-year student at the University of Waterloo, majoring in Stats with a CS minor. I am passionate about exploring new technologies and enjoy spending my free time playing chess and badminton.
+          </v-card-text>
+              <v-btn icon href="https://github.com/Thiveyan" target="_blank" class="ma-2">
+                <v-icon>mdi-github</v-icon>
+              </v-btn>
+              <v-btn icon href="https://www.linkedin.com/in/Thiveyan" target="_blank" class="ma-2">
+                <v-icon>mdi-linkedin</v-icon>
+              </v-btn>
+              <v-btn icon href="mailto:tjegasot@uwaterloo.ca" class="ma-2">
+                <v-icon>mdi-email</v-icon>
+              </v-btn>
+        </v-col>
+      </v-row>
+    </v-card>
   </section>
 </template>
 
-<script lang="ts" setup>
-
+<script>
+export default {
+  name: 'Thiveyan',
+};
 </script>
-
-<style scoped>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-
-a:hover i {
-  color: #ff4500; 
-}
-.profile-picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.profile-picture:hover {
-  transform: scale(1.1);
-}
-
-</style>
