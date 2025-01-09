@@ -82,9 +82,18 @@
         </v-chip-group>
       </div>
 
-      <v-btn variant="tonal" color="white">
-        <RouterLink to ="/wilson-pinia">Check out my pinia page</RouterLink>
-      </v-btn>
+      <v-row>
+        <v-col cols="auto">
+          <v-btn variant="tonal" color="white">
+            <RouterLink to ="/wilson-pinia">Check out my pinia page</RouterLink>
+          </v-btn>
+        </v-col>
+        <v-col cols="auto">
+          <v-btn variant="tonal" color="white">
+            <RouterLink to ="/wilson-weather">Check out my weather page</RouterLink>
+          </v-btn>
+        </v-col>
+      </v-row>
     </div>
   </section>
 </template>

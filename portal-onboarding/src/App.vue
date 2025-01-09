@@ -1,8 +1,13 @@
 <template>
   <v-app>
     <v-main>
-      <router-view v-if="$route.path === '/pinia' ||$route.path === '/thiveyan-pinia' ||$route.path === '/wilson-pinia' 
-      || $route.path === '/jasper-weather'" />
+      <router-view 
+        v-if="$route.path === '/pinia' ||
+        $route.path === '/thiveyan-pinia' ||
+        $route.path === '/wilson-pinia' || 
+        $route.path === '/wilson-weather'|| 
+        $route.path === '/jasper-weather'" 
+      />
       <template v-else>
         <Navbar />
         <Hero />
