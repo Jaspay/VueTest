@@ -14,8 +14,8 @@
                 mandatory
                 color="primary"
               >
-                <v-btn value="short">Short Term</v-btn>
-                <v-btn value="long">Long Term</v-btn>
+                <v-btn value="short">Hourly</v-btn>
+                <v-btn value="long">Weekly</v-btn>
               </v-btn-toggle>
             </div>
   
@@ -48,7 +48,7 @@
                 sm="6" 
                 md="4"
               >
-                <v-card elevation="2">
+                <v-card elevation="2" :color="day.color">
                   <v-card-title class="text-h6 pb-0">
                     {{ day.dateLabel }}
                   </v-card-title>
@@ -87,7 +87,7 @@
                 sm="6" 
                 md="4"
               >
-                <v-card elevation="2">
+                <v-card elevation="2" :color="day.color">
                   <v-card-title class="text-h6 pb-0">
                     {{ day.dateLabel }}
                   </v-card-title>
