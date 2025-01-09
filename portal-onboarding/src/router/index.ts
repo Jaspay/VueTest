@@ -3,7 +3,7 @@ import App from '../App.vue'
 import Pinia from '../components/Pinia.vue'
 import ThiveyanPinia from '@/components/ThiveyanPinia.vue'
 import WilsonPinia from '../components/WilsonPinia.vue'
-
+import WilsonWeather from '@/components/WilsonWeather.vue'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -22,6 +22,10 @@ const router = createRouter({
     {
       path: '/wilson-pinia',
       component: WilsonPinia
+    },
+    {
+      path: '/wilson-weather',
+      component: WilsonWeather
     }
   ]
 })
