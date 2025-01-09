@@ -3,6 +3,7 @@ import App from '../App.vue'
 import Pinia from '../components/Pinia.vue'
 import ThiveyanPinia from '@/components/ThiveyanPinia.vue'
 import WilsonPinia from '../components/WilsonPinia.vue'
+import JasperWeather from '../components/JasperWeather.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -22,6 +23,10 @@ const router = createRouter({
     {
       path: '/wilson-pinia',
       component: WilsonPinia
+    },
+    {
+      path:'/jasper-weather',
+      component: JasperWeather
     }
   ]
 })

@@ -61,6 +61,13 @@
                 >
                   <RouterLink to ="/pinia">Pinia Test</RouterLink>
                 </v-btn>
+                <v-btn
+                  color="purple"
+                  variant="outlined"
+                  size="small"
+                  class="mx-2">
+                  <RouterLink to ="/jasper-weather">Weather Forecast</RouterLink>
+                </v-btn>
               </div>
             </div>
           </v-card-actions>
