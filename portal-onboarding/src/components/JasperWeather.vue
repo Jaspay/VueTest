@@ -70,7 +70,7 @@
                         <v-list-item-title>
                           <div>Temperature: {{ day.temp }}°C</div>
                           <div>Feels like: {{ day.apparentTemp }}°C</div>
-                          <div>Precipitation: {{ day.pop }}%</div>
+                          <div>Precipitation: {{ (day.pop * 100).toFixed(0) }}%</div>
                         </v-list-item-title>
                       </v-list-item>
                     </v-list>
@@ -110,6 +110,7 @@
                         <v-list-item-title>
                           <div>Min: {{ day.tempMin }}°C</div>
                           <div>Max: {{ day.tempMax }}°C</div>
+                          <div>Precipitation: {{ (day.pop * 100).toFixed(0) }}%</div>
                         </v-list-item-title>
                       </v-list-item>
                     </v-list>
