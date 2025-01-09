@@ -23,6 +23,11 @@
               <v-btn icon href="mailto:tjegasot@uwaterloo.ca" class="ma-2">
                 <v-icon>mdi-email</v-icon>
               </v-btn>
+              <v-btn class="ma-2">
+                <RouterLink to ="/thiveyan-pinia">
+                  <v-icon>mdi-heart</v-icon> <span>&nbsp;Pinia Page</span>
+                </RouterLink>
+              </v-btn>
         </v-col>
       </v-row>
     </v-card>
