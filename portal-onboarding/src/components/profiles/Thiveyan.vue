@@ -28,6 +28,11 @@
                   <v-icon>mdi-heart</v-icon> <span>&nbsp;Pinia Page</span>
                 </RouterLink>
               </v-btn>
+              <v-btn class="ma-2">
+                <RouterLink to ="/thiveyan-weather">
+                  <v-icon>mdi-weather-cloudy-clock</v-icon> <span>&nbsp;Check Weather</span>
+                </RouterLink>
+              </v-btn>
         </v-col>
       </v-row>
     </v-card>

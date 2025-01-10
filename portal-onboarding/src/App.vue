@@ -6,7 +6,8 @@
         $route.path === '/thiveyan-pinia' ||
         $route.path === '/wilson-pinia' || 
         $route.path === '/wilson-weather'|| 
-        $route.path === '/jasper-weather'" 
+        $route.path === '/jasper-weather' ||
+        $route.path === '/thiveyan-weather'" 
       />
       <template v-else>
         <Navbar />
