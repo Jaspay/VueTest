@@ -69,8 +69,15 @@
             :title="item.dateLabel"
           ></v-list-item>
         </template>
-
-
+        <v-card-actions class="mt-3 justify-center">
+          <v-btn 
+            @click="$router.push('/')" 
+            color="weatherStore.weather.data.color"
+            variant="tonal"
+          >
+            <v-icon>mdi-arrow-left</v-icon> Back
+          </v-btn>
+        </v-card-actions>
     </v-card>
      </v-card>
     </v-container>
